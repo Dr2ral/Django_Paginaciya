@@ -7,17 +7,16 @@
 <body>
 
 <div class="row">
-    <form>
-      <label for='game-select'>All games</label>
-        <select name="game" id="game-select">
-          <option value="">-- Choose the game --</option>
-          <option value="assasin's">Assasin's Creed</option>
-          <option value="farcry">Far Cry</option>
-          <option value="gta">Grand Theft Auto</option>
-          <option value="hitman">Hitman</option>
-          <option value="nfs">Need For Speed</option>
-        </select>
-    </form>
+<form method="get">
+    <select  name="pages" id="pages">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+
+    <input type="submit" >
+</form>
     {% for post in page_obj %}
       <div class="col-md-4">
           <h2>{{ post.title }}</h2>
@@ -64,5 +63,6 @@
 
        {% endif %}
 {% endif %}
+
 </body>
 </html>
